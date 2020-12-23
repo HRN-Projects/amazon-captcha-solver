@@ -7,8 +7,8 @@ import cv2
 import pickle
 
 
-MODEL_FILENAME = "captcha_model.hdf5"
-MODEL_LABELS_FILENAME = "model_labels.dat"
+MODEL_FILENAME = "amz_captcha_model.hdf5"
+MODEL_LABELS_FILENAME = "amz_captcha_model.dat"
 CAPTCHA_IMAGE_FOLDER = "test_captchas"
 
 

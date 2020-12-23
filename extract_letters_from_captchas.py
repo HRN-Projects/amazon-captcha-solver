@@ -5,8 +5,8 @@ import glob
 import imutils
 
 
-CAPTCHA_IMAGE_FOLDER = "generated_captchas"
-OUTPUT_FOLDER = "extracted_letter_images"
+CAPTCHA_IMAGE_FOLDER = "training_dataset_captchas"
+OUTPUT_FOLDER = "extracted_letters"
 
 
 # Get a list of all the captcha images we need to process
