@@ -2,7 +2,6 @@
 A solution for tackling captcha when collecting data from Amazon.
 
 Mostly based on - [Break a captcha system](https://medium.com/@ageitgey/how-to-break-a-captcha-system-in-15-minutes-with-machine-learning-dbebb035a710). I have added some of my own modifications and additions to it, according to my use case.
-
 This is a TensorFlow (Deep Learning - CNN) based solution which works far better than tesseract based OCR.
 
 The goal is to solve the captcha images from Amazon. Sample captcha image can be seen below -
