@@ -8,5 +8,11 @@ The goal is to solve the captcha images from Amazon. Sample captcha image can be
 
 ![a sample captcha image](https://github.com/HRN-Projects/captcha-solver/blob/main/test_captchas/Captcha_iwhygarbwz.jpg)
 
+
+To contribute, please start with installing all the packages from requirements file.
+```
+pip install requirements.txt
+```
+
 The current model file is built after training some 4K training set captcha images.
 Training can performed on much more larger dataset for better results, but current results aren't bad either :wink:.
