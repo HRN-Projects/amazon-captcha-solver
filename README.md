@@ -1,4 +1,4 @@
-# captcha-solver
+# Amazon Captcha Solver
 A solution for tackling captcha when collecting data from Amazon.
 
 Mostly based on - [Break a captcha system](https://medium.com/@ageitgey/how-to-break-a-captcha-system-in-15-minutes-with-machine-learning-dbebb035a710). I have added some of my own modifications and additions to it, according to my use case.
