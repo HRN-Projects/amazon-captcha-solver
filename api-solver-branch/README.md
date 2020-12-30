@@ -14,7 +14,7 @@ python solve_api.py
 your_api_ip_address:5000    # '5000' being the default port for Flask Server, which hosts the API.
 ```
 
-3. To call the captcah solver function with 'requests' module and passing captcha image as file -
+3. To call the captcha solver function with 'requests' module and passing captcha image as file -
 ```
 import requests
 
