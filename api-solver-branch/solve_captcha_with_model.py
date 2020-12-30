@@ -8,9 +8,9 @@ import pickle
 
 class CaptchaSolver:
     def __init__(self):
-        self.MODEL_FILENAME = "/home/webspider/hrn/projects/amazon-captcha-solver-main/amz_captcha_model.hdf5"
-        self.MODEL_LABELS_FILENAME = "/home/webspider/hrn/projects/amazon-captcha-solver-main/amz_captcha_model_labels.dat"
-        self.IMAGE_FILE = "/home/webspider/hrn/projects/amazon-captcha-solver-main/test.jpg"
+        self.MODEL_FILENAME = "amz_captcha_model.hdf5"
+        self.MODEL_LABELS_FILENAME = "amz_captcha_model_labels.dat"
+        self.IMAGE_FILE = "test.jpg"
 
 
     def solve(self):
@@ -58,7 +58,7 @@ class CaptchaSolver:
                 letter_image_regions.append((x, y, w, h))
 
         # If we found more or less than 6 letters in the captcha, our letter extraction
-        # didn't work correcly. Skip further processing and print output.
+        # didn't work correcly. Skip further processing and return output.
         if len(letter_image_regions) != 6:
             return "Couldn't solve the uploaded captcha file"
         else:
@@ -97,6 +97,6 @@ class CaptchaSolver:
                 cv2.rectangle(output, (x - 2, y - 2), (x + w + 4, y + h + 4), (0, 255, 0), 1)
                 cv2.putText(output, letter, (x - 5, y - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.55, (0, 255, 0), 2)
 
-            # Print the captcha's text
+            # Return the captcha's text
             captcha_text = "".join(predictions)
             return captcha_text
