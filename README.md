@@ -8,7 +8,7 @@ This is a Flask API based solution to solve the captcha, by accepting the captch
 The goal is to solve the captcha images from Amazon. Sample captcha image can be seen below -
 
 ![a sample captcha image](https://github.com/HRN-Projects/captcha-solver/blob/main/test_captchas/Captcha_iwhygarbwz.jpg)
-
+<br>
 
 ## How to use : ##
 1. Run the Flask API script -
@@ -44,8 +44,7 @@ def captcha_uploader():
     
     return captcha_text
 ```
-
-
+<br>
 
 ## How to contribute : ##
 1. Please start with installing all the required packages from requirements file-
@@ -57,7 +56,9 @@ def captcha_uploader():
   ```
   python solve_captchas_with_model.py
   ```
+<br>
 
+## P.S. Notes : ##
 ### Regarding model file ###
 The current model file is built after training some 4K training set captcha images.
 Training can performed on much more larger dataset for better results, but current results aren't bad either :wink:.
