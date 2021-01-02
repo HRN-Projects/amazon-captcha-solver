@@ -1,7 +1,0 @@
-README.md
-setup.py
-amazoncapApi.egg-info/PKG-INFO
-amazoncapApi.egg-info/SOURCES.txt
-amazoncapApi.egg-info/dependency_links.txt
-amazoncapApi.egg-info/requires.txt
-amazoncapApi.egg-info/top_level.txt
