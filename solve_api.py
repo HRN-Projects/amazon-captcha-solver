@@ -26,6 +26,7 @@ def solve_captcha():
         captcha_output = captchaSolver.solve()
     else:
         captcha_output = "Image file invalid! Please try again."
+
     return jsonify({"output":captcha_output})
 
 app.run(host="0.0.0.0")
