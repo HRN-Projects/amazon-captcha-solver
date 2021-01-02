@@ -1,0 +1,10 @@
+CAPTCHA text for amz_captcha_solver/test_captchas/Captcha_iwiimbalat.jpg is: HALHTE
+CAPTCHA text for amz_captcha_solver/test_captchas/Captcha_iwijhdhtaz.jpg is: NBPLFU
+CAPTCHA text for amz_captcha_solver/test_captchas/Captcha_iwjeqvqkll.jpg is: CBEMCC
+CAPTCHA text for amz_captcha_solver/test_captchas/Captcha_iwlvcqvdiu.jpg is: PHLUGJ
+CAPTCHA text for amz_captcha_solver/test_captchas/Captcha_iwhygarbwz.jpg is: XBPGYR
+Couldn't solve file : amz_captcha_solver/test_captchas/Captcha_iwjjmfrwzt.jpg
+Couldn't solve file : amz_captcha_solver/test_captchas/Captcha_vvuhhkvosw.jpg
+CAPTCHA text for amz_captcha_solver/test_captchas/Captcha_iwjrgajojs.jpg is: CAMAHC
+Couldn't solve file : amz_captcha_solver/test_captchas/Captcha_iwmolghjdm.jpg
+CAPTCHA text for amz_captcha_solver/test_captchas/Captcha_iwkqfifxpd.jpg is: CANPXN
