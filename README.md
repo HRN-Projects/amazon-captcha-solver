@@ -65,5 +65,5 @@ Training can performed on much more larger dataset for better results, but curre
 
 
 ### Regarding API code ###
-The API works fine but can be enhanced further according to use cases. The API's reponses would highly dependent upon the training quality of the model file.
+The API works fine but can be enhanced further according to use cases. The API's reponses would highly depend upon the training quality of the model file.
 
