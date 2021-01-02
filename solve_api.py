@@ -34,4 +34,4 @@ def solve_captcha():
 
     return jsonify({'output': captcha_output})
 
-app.run(host='0.0.0.0')
+app.run()
