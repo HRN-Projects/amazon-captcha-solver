@@ -1,7 +1,14 @@
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)  [![PyPi Python Versions](https://img.shields.io/pypi/pyversions/yt2mp3.svg)](https://pypi.python.org/pypi/yt2mp3/)
+
 # Amazon Captcha Solver
 A Flask API based solution for tackling captcha when collecting data from Amazon.
 
 This is a Flask API based solution to solve the captcha, by accepting the captcha image from POST request. The API then calls the captcha solving script and sends the solved captcha text in return.
+
+The goal is to solve the captcha images from Amazon. Sample captcha image can be seen below -
+
+![a sample captcha image](https://github.com/HRN-Projects/captcha-solver/blob/main/test_captchas/Captcha_iwhygarbwz.jpg)
+
 
 ## How to use : ##
 1. Run the Flask API script -
@@ -37,11 +44,6 @@ def captcha_uploader():
     
     return captcha_text
 ```
-
-
-The goal is to solve the captcha images from Amazon. Sample captcha image can be seen below -
-
-![a sample captcha image](https://github.com/HRN-Projects/captcha-solver/blob/main/test_captchas/Captcha_iwhygarbwz.jpg)
 
 
 
