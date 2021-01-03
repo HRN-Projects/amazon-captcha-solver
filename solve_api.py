@@ -24,7 +24,7 @@ def solve_captcha():
     img = request.files['captcha']
     if img.filename != '':
         img.filename = 'test.jpg'
-        img.save(os.path.join(image_file_path, img.filename))
+        img.save(img.filename)
         captcha_output = captchaSolver.solve()
     else:
         captcha_output = 'Image file invalid! Please try again.'
