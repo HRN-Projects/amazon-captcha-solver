@@ -2,8 +2,9 @@ opencv_python==4.4.0.46
 Flask==1.0.2
 imutils==0.5.3
 requests==2.22.0
-numpy==1.19.2
+numpy==1.17.4
+tensorflow_gpu==2.3.1
+beautifulsoup4==4.9.3
+keras==2.4.3
 scikit_learn==0.24.0
-tensorflow-cpu==2.1.0
-gunicorn==19.9.0
-httptools==0.1.1
+tensorflow==2.4.0
