@@ -4,7 +4,7 @@ import time
 from flask import Flask, request, jsonify
 from solve_captcha_with_model import CaptchaSolver
 
-# Below line can be set to some path. Uncomment if needed.
+# Below line can be set to some path. Uncomment Line 8 & 27 and Comment line 28, if required.
 # image_file_path = ""
 
 app = Flask(__name__)
@@ -24,6 +24,7 @@ def solve_captcha():
     img = request.files['captcha']
     if img.filename != '':
         img.filename = 'test.jpg'
+#         img.save(os.path.join(image_file_path, img.filename))
         img.save(img.filename)
         captcha_output = captchaSolver.solve()
     else:
