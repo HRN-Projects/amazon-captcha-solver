@@ -10,9 +10,6 @@ from solve_captcha_with_model import CaptchaSolver
 app = Flask(__name__)
 captchaSolver = CaptchaSolver()
 
-app.config['DEBUG'] = True  # turn off in prod
-
-
 @app.route('/', methods=['GET'])
 def health_check():
     """Confirms service is running"""
@@ -34,4 +31,5 @@ def solve_captcha():
 
     return jsonify({'output': captcha_output})
 
-app.run()
+if __name__ == '__main__':
+    app.run(DEBUG=True)
