@@ -33,4 +33,4 @@ def solve_captcha():
     return jsonify({'output': captcha_output})
 
 if __name__ == '__main__':
-    app.run(DEBUG=True)
+    app.run()
