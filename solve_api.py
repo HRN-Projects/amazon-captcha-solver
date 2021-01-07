@@ -34,4 +34,6 @@ def solve_captcha():
         captcha_output = "Image file invalid! Please try again."
     return jsonify({"output":captcha_output})
 
-app.run(host="0.0.0.0", port='5010')
+if __name__ == '__main__':
+    app.run(host="0.0.0.0")
+
