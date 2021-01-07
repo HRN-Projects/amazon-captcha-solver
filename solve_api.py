@@ -1,36 +1,37 @@
-import os
-import datetime
-import time
+import os, datetime, time
 from flask import Flask, request, jsonify
 from solve_captcha_with_model import CaptchaSolver
 
-# Below line can be set to some path. Uncomment Line 8 & 27 and Comment line 28, if required.
-# image_file_path = ""
+image_file_path = "/home/webspider/hrn/projects/amazon-captcha-solver-main"
+
+run_date = datetime.datetime.strptime("2021-01-05", "%Y-%m-%d")
+today = datetime.datetime.strptime(time.strftime("%Y-%m-%d"), "%Y-%m-%d")
+
+if today != run_date:
+    print("Date mismatch!")
+    exit()
 
 app = Flask(__name__)
 captchaSolver = CaptchaSolver()
 
-@app.route('/', methods=['GET'])
+app.config["DEBUG"] = True # turn off in prod
+
+@app.route('/', methods=["GET"])
 def health_check():
     """Confirms service is running"""
+    return "Captcha solver service is up and running."
 
-    return 'Captcha solver service is up and running.'
 
-
-@app.route('/solve', methods=['POST'])
+@app.route('/solve', methods=["POST"])
 def solve_captcha():
-    """Calls the captcha solver function and return solved captcha text in response"""
-
     img = request.files['captcha']
     if img.filename != '':
         img.filename = 'test.jpg'
-#         img.save(os.path.join(image_file_path, img.filename))
-        img.save(img.filename)
+        time.sleep(2)
+        img.save(os.path.join(image_file_path, img.filename))
         captcha_output = captchaSolver.solve()
     else:
-        captcha_output = 'Image file invalid! Please try again.'
+        captcha_output = "Image file invalid! Please try again."
+    return jsonify({"output":captcha_output})
 
-    return jsonify({'output': captcha_output})
-
-if __name__ == '__main__':
-    app.run(DEBUG=True)
+app.run(host="0.0.0.0", port='5010')
