@@ -49,7 +49,7 @@ def captcha_uploader():
 ## How to contribute : ##
 1. Please start with installing all the required packages from requirements file-
   ```
-  pip install requirements.txt
+  pip install -r requirements.txt
   ```
 
 2. Then to initially run the model on test_captchas, use following command -
