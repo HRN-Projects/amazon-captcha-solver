@@ -6,27 +6,30 @@ import imutils
 import cv2
 import pickle
 import tensorflow as tf
+import os
+import pathlib
 
 class CaptchaSolver:
     def __init__(self):
-        self.MODEL_FILENAME = "/home/webspider/hrn/projects/amazon-captcha-solver-main/amz_captcha_model.hdf5"
-        self.MODEL_LABELS_FILENAME = "/home/webspider/hrn/projects/amazon-captcha-solver-main/amz_captcha_model_labels.dat"
-        self.IMAGE_FILE = "/home/webspider/hrn/projects/amazon-captcha-solver-main/test.jpg"
+        home_path = pathlib.Path(__file__).parent.absolute()
+        self.MODEL_FILENAME = os.path.join(home_path, "amz_captcha_model.hdf5")
+        self.MODEL_LABELS_FILENAME = os.path.join(home_path, "amz_captcha_model_labels.dat")
+        # self.IMAGE_FILE = "/home/webspider/hrn/projects/amazon-captcha-solver-main/test.jpg"
 
 
-    def solve(self):
+    def solve(self, captcha_file):
         # Load up the model labels (so we can translate model predictions to actual letters)
         with open(self.MODEL_LABELS_FILENAME, "rb") as f:
             lb = pickle.load(f)
 
+        tf.compat.v1.disable_eager_execution()
+
         # Load the trained neural network
         model = load_model(self.MODEL_FILENAME)
 
-        tf.compat.v1.disable_eager_execution()
-
         try:
             # Load the image and convert it to grayscale
-            image = cv2.imread(self.IMAGE_FILE)
+            image = cv2.imread(captcha_file)
             image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
             # Add some extra padding around the image
@@ -66,7 +69,7 @@ class CaptchaSolver:
         # If we found more or less than 6 letters in the captcha, our letter extraction
         # didn't work correcly. Skip further processing and print output.
         if len(letter_image_regions) != 6:
-            return "Couldn't solve the uploaded captcha file"
+            return "Couldn't solve the uploaded captcha file: bad length {}".format(str(len(letter_image_regions)))
         else:
             # Sort the detected letter images based on the x coordinate to make sure
             # we are processing them from left-to-right so we match the right image
