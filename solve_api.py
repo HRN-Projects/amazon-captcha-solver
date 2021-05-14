@@ -2,8 +2,6 @@ import os, datetime, time
 from flask import Flask, request, jsonify
 from solve_captcha_with_model import CaptchaSolver
 
-image_file_path = "/home/webspider/hrn/projects/amazon-captcha-solver-main"
-
 run_date = datetime.datetime.strptime("2021-01-05", "%Y-%m-%d")
 today = datetime.datetime.strptime(time.strftime("%Y-%m-%d"), "%Y-%m-%d")
 
@@ -28,7 +26,7 @@ def solve_captcha():
     if img.filename != '':
         img.filename = 'test.jpg'
         time.sleep(2)
-        img.save(os.path.join(image_file_path, img.filename))
+        img.save(img.filename)
         captcha_output = captchaSolver.solve()
     else:
         captcha_output = "Image file invalid! Please try again."
