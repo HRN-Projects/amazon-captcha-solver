@@ -1,5 +1,5 @@
 opencv_python==4.4.0.46
-Flask==1.0.2
+Flask==2.2.5
 imutils==0.5.3
 requests==2.22.0
 numpy==1.17.4
